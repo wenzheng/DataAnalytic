@@ -14,7 +14,7 @@
 	<!-- this need same with resteasy servlet url-pattern -->
 	<context-param>
 		<param-name>resteasy.servlet.mapping.prefix</param-name>
-		<param-value>/emotion</param-value>
+		<param-value>/rest</param-value>
 	</context-param>
  
 	<listener>
@@ -32,7 +32,7 @@
  
 	<servlet-mapping>
 		<servlet-name>resteasy-servlet</servlet-name>
-		<url-pattern>/emotion/*</url-pattern>
+		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
  
 	

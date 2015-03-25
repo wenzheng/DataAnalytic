@@ -23,8 +23,8 @@ public class AWSSimpleQueueServiceUtil {
 	 */
 	private AWSSimpleQueueServiceUtil() {
 		try {
-			this.credentials = new BasicAWSCredentials("AKIAJEQWUXDSVNMYBAVA",
-					"B9dLFy0VNkOnPdKXfcRK78GsFz07KePsYMxnX2Ed");
+			this.credentials = new BasicAWSCredentials("REPLACE_ME",
+					"REPLACE_ME");
 
 			this.sqs = new AmazonSQSClient(this.credentials);
 			/**
@@ -86,6 +86,6 @@ public class AWSSimpleQueueServiceUtil {
        }
        ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(getQueueUrl(queueUrl));
        List<Message> messages = sqs.receiveMessage(receiveMessageRequest).getMessages();
-       return messages.get(0).toString();
+       return messages.get(0).getBody();
     }
 }
